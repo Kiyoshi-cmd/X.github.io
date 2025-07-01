@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>𝕏-𝙲𝚎𝚗𝚝𝚛𝚊𝚕 Discord Invitation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join 𝕏-𝙲𝚎𝚗𝚝𝚛𝚊𝚕, a Discord community for developers, ideas, and making friends!">
+  <meta property="og:title" content="Join 𝕏-𝙲𝚎𝚗𝚝𝚛𝚊𝚕 Discord!">
+  <meta property="og:description" content="Be a part of the 𝕏-𝙲𝚎𝚗𝚝𝚛𝚊𝚕 community! Click to join our Discord server.">
+  <meta property="og:url" content="https://discord.gg/WGgjhmwC6Q">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4ac.svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Fira+Mono&display=swap');
+    html, body {
+      min-height: 100vh;
+    }
+    body {
+      margin: 0;
+      color: #f0f3fa;
+      font-family: 'Montserrat', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+      background: #0a0a13;
+      position: relative;
+    }
+    .bg-animated {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .container {
+      background: rgba(22, 24, 36, 0.98);
+      border-radius: 20px;
+      padding: 54px 32px 36px 32px;
+      box-shadow: 0 8px 40px 0 rgba(32, 40, 105, 0.32), 0 0 0 2px #23253a77;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 420px;
+      z-index: 2;
+      position: relative;
+      backdrop-filter: blur(5px) saturate(1.15);
+    }
+    h1 {
+      font-size: 3.6rem;
+      letter-spacing: 0.04em;
+      margin-top: 0;
+      font-family: 'Fira Mono', monospace;
+      text-shadow: 0 2px 24px #22223b90;
+      margin-bottom: 12px;
+      color: #e5e7fa;
+      font-weight: 700;
+      line-height: 1.1;
+      text-align: center;
+      word-break: break-word;
+    }
+    p {
+      font-size: 1.18rem;
+      font-weight: 400;
+      margin: 0 0 26px 0;
+      text-align: center;
+      color: #c5c8eb;
+      text-shadow: 0 1px 8px #0c0d1a55;
+    }
+    .invite-btn {
+      background: linear-gradient(90deg, #5865f2 10%, #404eed 90%);
+      color: #fff;
+      font-size: 1.13rem;
+      font-weight: 700;
+      padding: 15px 48px;
+      border: none;
+      border-radius: 32px;
+      box-shadow: 0 2px 16px #5865f280, 0 0 0 2px #23253a55;
+      cursor: pointer;
+      transition: background 0.22s, transform 0.16s, box-shadow 0.22s;
+      text-decoration: none;
+      margin-top: 22px;
+      letter-spacing: 0.04em;
+      outline: none;
+      z-index: 2;
+      position: relative;
+      filter: drop-shadow(0 1px 6px #000);
+    }
+    .invite-btn:hover, .invite-btn:focus {
+      background: linear-gradient(90deg, #404eed 10%, #5865f2 90%);
+      transform: scale(1.07) translateY(-3px);
+      box-shadow: 0 8px 32px #5865f2c4, 0 0 0 2px #404eed99;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 18vw 2vw 8vw 2vw;
+        max-width: 99vw;
+      }
+      h1 { font-size: 2.2rem;}
+      .invite-btn { padding: 13px 10vw;}
+    }
+    @media (max-width: 400px) {
+      h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-animated">
+    <canvas id="bg-canvas"></canvas>
+  </div>
+  <div class="container">
+    <h1>𝕏-𝙲𝚎𝚗𝚝𝚛𝚊𝚕</h1>
+    <p>
+      Join a Virtual World, with help on developing, ideas, and a welcoming community.
+    </p>
+    <a class="invite-btn" href="https://discord.gg/WGgjhmwC6Q" target="_blank" rel="noopener" aria-label="Join 𝕏-𝙲𝚎𝚗𝚝𝚛𝚊𝚕 Discord server">
+      Join Now
+    </a>
+  </div>
+  <script>
+    // Modern animated background: softly glowing, floating colored blobs
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    let w = 0, h = 0;
+
+    function resize() {
+      w = window.innerWidth;
+      h = window.innerHeight;
+      canvas.width = w;
+      canvas.height = h;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    // Blobs
+    const blobs = [];
+    const colors = [
+      "rgba(88,101,242,0.16)",   // Discord blurple
+      "rgba(64,78,237,0.13)",    // Lighter
+      "rgba(169,139,255,0.10)",  // Accent
+      "rgba(36, 40, 86, 0.17)",  // Night blue
+      "rgba(228,230,255,0.07)"   // Subtle white
+    ];
+    const blobCount = Math.max(7, Math.floor((w * h) / 180000));
+    for(let i=0; i<blobCount; i++){
+      const rBase = 170 + Math.random()*100 * (w<700 ? 0.4 : 1);
+      blobs.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        r: rBase,
+        color: colors[Math.floor(Math.random()*colors.length)],
+        dx: (Math.random()-0.5) * 0.24,
+        dy: (Math.random()-0.5) * 0.24,
+        t: Math.random()*Math.PI*2,
+        spd: 0.001 + Math.random()*0.0006
+      });
+    }
+
+    function animate() {
+      ctx.clearRect(0,0,w,h);
+      for(const b of blobs){
+        b.t += b.spd;
+        b.x += Math.sin(b.t)*0.7 + b.dx;
+        b.y += Math.cos(b.t)*0.7 + b.dy;
+
+        // Wrap
+        if(b.x < -b.r) b.x = w + b.r;
+        if(b.x > w + b.r) b.x = -b.r;
+        if(b.y < -b.r) b.y = h + b.r;
+        if(b.y > h + b.r) b.y = -b.r;
+
+        // Draw blob
+        ctx.beginPath();
+        ctx.arc(b.x, b.y, b.r, 0, 2*Math.PI);
+        ctx.fillStyle = b.color;
+        ctx.shadowColor = b.color.replace('0.', '0.5');
+        ctx.shadowBlur = 48;
+        ctx.globalAlpha = 1;
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      }
+      requestAnimationFrame(animate);
+    }
+    animate();
+  </script>
+</body>
+</html>
